@@ -27,6 +27,16 @@ return {
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
 
+    local function footer()
+      return "Don't Stop Until You are Proud..."
+    end
+
+    dashboard.section.footer.val = footer()
+
+    dashboard.section.footer.opts.hl = "Function"
+    dashboard.section.header.opts.hl = "Function"
+    dashboard.section.buttons.opts.hl = "Include"
+
     -- Send config to alpha
     alpha.setup(dashboard.opts)
 
