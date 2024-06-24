@@ -44,6 +44,8 @@ return {
         "svelte",
         "graphql",
         "c",
+        "hcl",
+        "terraform",
       },
       incremental_selection = {
         enable = true,

@@ -150,7 +150,14 @@ return {
             },
           },
         })
-      end
+      end,
+      ["terraformls"] = function()
+        -- configure terraform language server
+        lspconfig["terraformls"].setup({
+          capabilities = capabilities,
+          filetypes = { "terraform", "terraform-vars" },
+        })
+      end,
     })
   end,
 }
